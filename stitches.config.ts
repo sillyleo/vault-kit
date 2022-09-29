@@ -13,7 +13,12 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
     colors: {},
     space: {},
     fontSizes: {},
-    fonts: {},
+    fonts: {
+      brand: "Modernist,system-ui, sans-serif",
+      body: "'Inter','InterVariable',sans-serif",
+      heading: "'Inter','InterVariable',,sans-serif",
+      mono: "'Space Mono', monospace",
+    },
     fontWeights: {},
     lineHeights: {},
     letterSpacings: {},
