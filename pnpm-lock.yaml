@@ -6,6 +6,7 @@ specifiers:
   '@radix-ui/react-icons': ^1.1.1
   '@radix-ui/react-popover': 1.0.0
   '@rainbow-me/rainbowkit': ^0.6.2
+  '@stitches/react': ^1.2.8
   '@types/node': 18.7.23
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -27,6 +28,7 @@ dependencies:
   '@radix-ui/react-icons': 1.1.1_react@18.2.0
   '@radix-ui/react-popover': 1.0.0_rj7ozvcq3uehdlnj3cbwzbi5ce
   '@rainbow-me/rainbowkit': 0.6.2_dz2k46tyc2wf7kgp3ew5zaoaua
+  '@stitches/react': 1.2.8_react@18.2.0
   ethers: 5.7.1
   framer: 2.2.0_osae6vs4t7tgn2jyonbysurltq
   framer-motion: 7.4.0_biqbaboplfbrettd7655fr4n2y
@@ -1175,6 +1177,14 @@ packages:
       - encoding
       - react-native
       - utf-8-validate
+    dev: false
+
+  /@stitches/react/1.2.8_react@18.2.0:
+    resolution: {integrity: sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@swc/helpers/0.4.11:
