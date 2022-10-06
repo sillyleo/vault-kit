@@ -1,5 +1,14 @@
 import { createStitches } from "@stitches/react";
-
+import {
+  gray,
+  blue,
+  red,
+  green,
+  grayDark,
+  blueDark,
+  redDark,
+  greenDark,
+} from "@radix-ui/colors";
 /*
 Use stitches as css-in-js solution
 
@@ -10,7 +19,12 @@ Use stitches as css-in-js solution
 // Setting up default theme
 export const { styled, getCssText, globalCss, createTheme } = createStitches({
   theme: {
-    colors: {},
+    colors: {
+      ...gray,
+      ...blue,
+      ...red,
+      ...green,
+    },
     space: {},
     fontSizes: {},
     fonts: {
@@ -34,7 +48,7 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
 
 // Setting up custom theme, the "darkTheme" can be the className
 export const darkTheme = createTheme({
-  colors: {},
+  colors: { ...grayDark, ...blueDark, ...redDark, ...greenDark },
 });
 
 // css reset
