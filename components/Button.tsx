@@ -7,4 +7,7 @@ export const Button = styled("button", {
   padding: "10px 20px",
   color: "$mint11",
   borderColor: "$mint6",
+  display: "flex",
+  alignItems: "center",
+  gap: "0.5em",
 });

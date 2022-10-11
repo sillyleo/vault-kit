@@ -1,19 +1,8 @@
-import { createStitches } from "@stitches/react";
+import {createStitches} from "@stitches/react";
 /*
  Color source https://www.radix-ui.com/docs/colors/palette-composition/the-scales
 */
-import {
-  gray,
-  blue,
-  red,
-  green,
-  grayDark,
-  blueDark,
-  redDark,
-  greenDark,
-  mint,
-  mintDark,
-} from "@radix-ui/colors";
+import {blue, blueDark, gray, grayDark, green, greenDark, mint, mintDark, red, redDark,} from "@radix-ui/colors";
 
 /*
 Use stitches as css-in-js solution: https://stitches.dev/blog/using-nextjs-with-stitches
