@@ -1,4 +1,7 @@
 import { createStitches } from "@stitches/react";
+/*
+ Color source https://www.radix-ui.com/docs/colors/palette-composition/the-scales
+*/
 import {
   gray,
   blue,
@@ -8,12 +11,11 @@ import {
   blueDark,
   redDark,
   greenDark,
+    mint, mintDark
 } from "@radix-ui/colors";
+
 /*
-Use stitches as css-in-js solution
-
--  Doc: https://stitches.dev/blog/using-nextjs-with-stitches
-
+Use stitches as css-in-js solution: https://stitches.dev/blog/using-nextjs-with-stitches
 */
 
 // Setting up default theme
@@ -24,6 +26,7 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
       ...blue,
       ...red,
       ...green,
+        ...mint
     },
     space: {},
     fontSizes: {},
@@ -48,7 +51,7 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
 
 // Setting up custom theme, the "darkTheme" can be the className
 export const darkTheme = createTheme({
-  colors: { ...grayDark, ...blueDark, ...redDark, ...greenDark },
+  colors: { ...grayDark, ...blueDark, ...redDark, ...greenDark,...mintDark },
 });
 
 // css reset
