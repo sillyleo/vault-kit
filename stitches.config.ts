@@ -11,7 +11,8 @@ import {
   blueDark,
   redDark,
   greenDark,
-    mint, mintDark
+  mint,
+  mintDark,
 } from "@radix-ui/colors";
 
 /*
@@ -26,7 +27,7 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
       ...blue,
       ...red,
       ...green,
-        ...mint
+      ...mint,
     },
     space: {},
     fontSizes: {},
@@ -51,12 +52,16 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
 
 // Setting up custom theme, the "darkTheme" can be the className
 export const darkTheme = createTheme({
-  colors: { ...grayDark, ...blueDark, ...redDark, ...greenDark,...mintDark },
+  colors: { ...grayDark, ...blueDark, ...redDark, ...greenDark, ...mintDark },
 });
 
 // css reset
 const cssReset = globalCss({
-  body: { margin: 0, padding: 0 },
+  body: {
+    margin: 0,
+    padding: 0,
+    fontFamily: "'Inter',sans-serif",
+  },
 });
 
 cssReset();

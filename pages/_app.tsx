@@ -11,6 +11,8 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ThemeProvider } from 'next-themes';
 import { darkTheme } from '../stitches.config';
+import "@fontsource/inter/";
+
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
