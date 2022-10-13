@@ -8,28 +8,46 @@ export const Button = styled("button", {
   display: "inline-flex",
   alignItems: "center",
   gap: "0.5em",
-  backgroundColor: "$blue9",
-  borderColor: "$blue9",
-  color: "$blue2",
   borderWidth: 0,
   borderRadius: "$full",
   cursor: "pointer",
-  transition: "transform 0.2s linear",
+  transition: "transform 0.06s linear",
 
   "&:hover": {
-    backgroundColor: "$blue10",
     transform: "scale(1.02)",
   },
 
   "&:active": {
-    backgroundColor: "$blue10",
-    transform: "scale(0.98)",
+    transform: "scale(0.9)",
   },
 
   // variants (use as props)
 
   variants: {
-    color: {},
+    color: {
+      blue: {
+        backgroundColor: "$blue9",
+        color: "$whiteA12",
+        "&:hover": {
+          backgroundColor: "$blue10",
+        },
+
+        "&:active": {
+          backgroundColor: "$blue10",
+        },
+      },
+      tomato: {
+        backgroundColor: "$tomato9",
+        color: "$whiteA12",
+        "&:hover": {
+          backgroundColor: "$tomato10",
+        },
+
+        "&:active": {
+          backgroundColor: "$tomato10",
+        },
+      },
+    },
     size: {
       "1": {
         fontSize: "$1",
@@ -41,11 +59,12 @@ export const Button = styled("button", {
       },
       "3": {
         fontSize: "$4",
-        padding: "$2 $4",
+        padding: "$2 $5",
       },
     },
   },
   defaultVariants: {
     size: "2",
+    color: "blue",
   },
 });

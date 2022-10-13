@@ -27,6 +27,15 @@ const Home: NextPage = () => {
       <Button size="1">hello</Button>
       <Button size="2">hello</Button>
       <Button size="3">hello</Button>
+      <Button color="tomato" size="1">
+        hello
+      </Button>
+      <Button color="tomato" size="2">
+        hello
+      </Button>
+      <Button color="tomato" size="3">
+        hello
+      </Button>
       <div>{addressStr}</div>
       <p>
         USDC Balance on OP (for testing):
