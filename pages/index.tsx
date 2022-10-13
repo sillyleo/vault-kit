@@ -27,13 +27,49 @@ const Home: NextPage = () => {
       <Button size="1">hello</Button>
       <Button size="2">hello</Button>
       <Button size="3">hello</Button>
-      <Button color="tomato" size="1">
+      <Button color="whiteA" size="1">
         hello
       </Button>
+      <Button color="whiteA" size="2">
+        hello
+      </Button>
+      <Button color="whiteA" size="3">
+        hello
+      </Button>
+      <Button color="blackA" size="1">
+        hello
+      </Button>
+      <Button color="blackA" size="2">
+        hello
+      </Button>{" "}
+      <Button color="blackA" size="3">
+        hello
+      </Button>
+      <Button color="tomato" size="1">
+        hello
+      </Button>{" "}
       <Button color="tomato" size="2">
         hello
       </Button>
       <Button color="tomato" size="3">
+        hello
+      </Button>{" "}
+      <Button color="grass" size="1">
+        hello
+      </Button>
+      <Button color="grass" size="2">
+        hello
+      </Button>
+      <Button color="grass" size="3">
+        hello
+      </Button>{" "}
+      <Button color="blue" size="1">
+        hello
+      </Button>
+      <Button color="blue" size="2">
+        hello
+      </Button>
+      <Button color="blue" size="3">
         hello
       </Button>
       <div>{addressStr}</div>

@@ -307,15 +307,3 @@ export const darkTheme = createTheme({
     ...goldDarkA,
   },
 });
-
-// css reset
-const cssReset = globalCss({
-  body: {
-    margin: 0,
-    padding: 0,
-    letterSpacings: "$normal",
-    fontFamily: "$body",
-  },
-});
-
-cssReset();

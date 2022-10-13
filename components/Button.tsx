@@ -22,12 +22,12 @@ export const Button = styled("button", {
   },
 
   // variants (use as props)
+  color: "$whiteA12",
 
   variants: {
     color: {
       blue: {
         backgroundColor: "$blue9",
-        color: "$whiteA12",
         "&:hover": {
           backgroundColor: "$blue10",
         },
@@ -38,13 +38,60 @@ export const Button = styled("button", {
       },
       tomato: {
         backgroundColor: "$tomato9",
-        color: "$whiteA12",
         "&:hover": {
           backgroundColor: "$tomato10",
         },
 
         "&:active": {
           backgroundColor: "$tomato10",
+        },
+      },
+      grass: {
+        backgroundColor: "$grass9",
+        "&:hover": {
+          backgroundColor: "$grass10",
+        },
+
+        "&:active": {
+          backgroundColor: "$grass10",
+        },
+      },
+      gray: {
+        color: "$sage11",
+        backgroundColor: "$sage3",
+        "&:hover": {
+          backgroundColor: "$sage4",
+        },
+
+        "&:active": {
+          backgroundColor: "$sage4",
+        },
+      },
+      // For colored background
+      whiteA: {
+        color: "$blackA12",
+        backgroundColor: "$whiteA10",
+        backdropFilter: "blur(10px)",
+        "&:hover": {
+          backgroundColor: "$whiteA10",
+        },
+
+        "&:active": {
+          backgroundColor: "$whiteA10",
+        },
+      },
+      // For colored background
+      blackA: {
+        color: "$whiteA12",
+        backgroundColor: "$blackA10",
+        backdropFilter: "blur(10px)",
+
+        "&:hover": {
+          backgroundColor: "$blackA10",
+        },
+
+        "&:active": {
+          backgroundColor: "$blackA10",
         },
       },
     },
@@ -65,6 +112,6 @@ export const Button = styled("button", {
   },
   defaultVariants: {
     size: "2",
-    color: "blue",
+    color: "gray",
   },
 });

@@ -11,7 +11,7 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import { ThemeProvider } from "next-themes";
-import { darkTheme } from "../stitches.config";
+import { darkTheme, globalCss } from "../stitches.config";
 import "@fontsource/inter/";
 
 const { chains, provider, webSocketProvider } = configureChains(
@@ -52,7 +52,18 @@ const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
   </Text>
 );
 
+// css reset
+
 function MyApp({ Component, pageProps }: AppProps) {
+  const cssReset = globalCss({
+    body: {
+      margin: 0,
+      padding: 0,
+      letterSpacings: "$normal",
+      fontFamily: "$body",
+    },
+  });
+  cssReset();
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
@@ -72,7 +83,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           attribute="class"
           defaultTheme="system"
           value={{
-            light: "light",
             dark: darkTheme,
           }}
         >
