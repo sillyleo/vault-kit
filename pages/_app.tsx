@@ -1,24 +1,28 @@
-import "@rainbow-me/rainbowkit/styles.css";
-import type { AppProps } from "next/app";
+import '@rainbow-me/rainbowkit/styles.css';
+import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
   darkTheme as walletDarkTheme,
   lightTheme as walletLightTheme,
   DisclaimerComponent,
-} from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
-import { ThemeProvider } from "next-themes";
-import { darkTheme, globalCss } from "../stitches.config";
-import "@fontsource/inter/";
+} from '@rainbow-me/rainbowkit';
+import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+import { ThemeProvider } from 'next-themes';
+import { darkTheme } from '../stitches.config';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
     chain.optimism,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true'
       ? [chain.goerli]
       : []),
   ],
@@ -26,14 +30,14 @@ const { chains, provider, webSocketProvider } = configureChains(
     alchemyProvider({
       // This is Alchemy's default API key.
       // You can get your own at https://dashboard.alchemyapi.io
-      apiKey: "_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC",
+      apiKey: '_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC',
     }),
     publicProvider(),
   ]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "RainbowKit App",
+  appName: 'RainbowKit App',
   chains,
 });
 
@@ -45,9 +49,9 @@ const wagmiClient = createClient({
 });
 const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
   <Text>
-    By connecting your wallet, you agree to the{" "}
+    By connecting your wallet, you agree to the{' '}
     <Link href="https://termsofservice.xyz">Terms of Service</Link> and
-    acknowledge you have read and understand the protocol{" "}
+    acknowledge you have read and understand the protocol{' '}
     <Link href="https://disclaimer.xyz">Disclaimer</Link>
   </Text>
 );
@@ -55,37 +59,26 @@ const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
 // css reset
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const cssReset = globalCss({
-    body: {
-      margin: 0,
-      padding: 0,
-      letterSpacings: "$normal",
-      fontFamily: "$body",
-    },
-  });
-  cssReset();
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
         theme={{
-          lightMode: walletLightTheme({ fontStack: "system" }),
-          darkMode: walletDarkTheme({ fontStack: "system" }),
+          lightMode: walletLightTheme({ fontStack: 'system' }),
+          darkMode: walletDarkTheme({ fontStack: 'system' }),
         }}
         appInfo={{
-          appName: "Rainbowkit Demo",
-          learnMoreUrl: "https://perp.com",
+          appName: 'Rainbowkit Demo',
+          learnMoreUrl: 'https://perp.com',
           disclaimer: Disclaimer,
         }}
         showRecentTransactions={true}
-        chains={chains}
-      >
+        chains={chains}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           value={{
             dark: darkTheme,
-          }}
-        >
+          }}>
           <Component {...pageProps} />
         </ThemeProvider>
       </RainbowKitProvider>

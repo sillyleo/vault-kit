@@ -1,7 +1,5 @@
-import { createStitches } from "@stitches/react";
-/*
- Color source https://www.radix-ui.com/docs/colors/palette-composition/the-scales
-*/
+import { createStitches } from '@stitches/react';
+
 import {
   gray,
   mauve,
@@ -117,10 +115,9 @@ import {
   brownDarkA,
   bronzeDarkA,
   goldDarkA,
-} from "@radix-ui/colors";
-import "@fontsource/inter";
-
+} from '@radix-ui/colors';
 /*
+Color source https://www.radix-ui.com/docs/colors/palette-composition/the-scales
 Use stitches as css-in-js solution: https://stitches.dev/blog/using-nextjs-with-stitches
 */
 
@@ -190,37 +187,37 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
       ...blackA,
     },
     space: {
-      1: "4px",
-      2: "8px",
-      3: "16px",
-      4: "20px",
-      5: "24px",
-      6: "32px",
-      7: "48px",
-      8: "64px",
-      9: "80px",
+      1: '4px',
+      2: '8px',
+      3: '12px',
+      4: '16px',
+      5: '20px',
+      6: '24px',
+      7: '28px',
+      8: '32px',
+      9: '36px',
     },
     sizes: {
-      1: "4px",
-      2: "8px",
-      3: "16px",
-      4: "20px",
-      5: "24px",
-      6: "32px",
-      7: "48px",
-      8: "64px",
-      9: "80px",
+      1: '4px',
+      2: '8px',
+      3: '12px',
+      4: '16px',
+      5: '20px',
+      6: '24px',
+      7: '32px',
+      8: '48px',
+      9: '64px',
     },
     fontSizes: {
-      1: "11px",
-      2: "13px",
-      3: "15px",
-      4: "21px",
-      5: "34px",
-      6: "46px",
+      1: '11px',
+      2: '13px',
+      3: '15px',
+      4: '21px',
+      5: '34px',
+      6: '52px',
     },
     fonts: {
-      brand: "Modernist ,system-ui, sans-serif",
+      brand: 'Modernist ,system-ui, sans-serif',
       body: "'Inter','InterVariable',sans-serif",
       heading: "'Inter','InterVariable',sans-serif",
       mono: "'Space Mono', monospace",
@@ -228,16 +225,16 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
     fontWeights: {},
     lineHeights: {},
     letterSpacings: {
-      tight: "-0.05em",
-      normal: "-0.01em",
+      tight: '-0.03em',
+      normal: '-0.01em',
     },
     borderWidths: {},
     borderStyles: {},
     radii: {
-      sm: "8px",
-      md: "16px",
-      lg: "24px",
-      full: "100px",
+      sm: '8px',
+      md: '16px',
+      lg: '24px',
+      full: '999px',
     },
     shadows: {},
     zIndices: {},
@@ -307,3 +304,13 @@ export const darkTheme = createTheme({
     ...goldDarkA,
   },
 });
+
+const cssReset = globalCss({
+  '*': {
+    margin: 0,
+    padding: 0,
+    letterSpacings: '$normal',
+    fontFamily: '$body',
+  },
+});
+cssReset();
