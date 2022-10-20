@@ -52,7 +52,8 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
   '[data-state=checked]:active &': {
     width: 26,
     height: 22,
-    left: 16,
+    left: 19,
+    border: '1px solid $colors$blue9',
   },
   '&[data-state=unchecked]': {
     top: 3,
@@ -70,13 +71,12 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
 });
 
 const StyledBackground = styled('div', {
-  transition: 'all 0.3s ease-in-out',
-  transitionDelay: '30ms',
+  transition: 'all 0.2s ease-in-out',
+  transitionDelay: '0ms',
   boxSizing: 'border-box',
   position: 'absolute',
   width: 37,
   height: 6,
-  backgroundColor: '$slate7',
   overflow: 'hidden',
   borderRadius: 50,
   '[data-state=checked] &': {
@@ -87,11 +87,27 @@ const StyledBackground = styled('div', {
     height: 28,
   },
   '[data-state=unchecked] &': {
-    backgroundColor: '$slate7',
+    backgroundColor: '$slate8',
     top: 11,
     left: 4,
     width: 37,
     height: 6,
+  },
+  '[data-state=checked]:active &': {
+    backgroundColor: '$slate8',
+    opacity: 0.75,
+    top: 3,
+    left: 0,
+    width: 45,
+    height: 22,
+  },
+  '[data-state=unchecked]:active &': {
+    backgroundColor: '$blue9',
+    opacity: 0.75,
+    top: 8,
+    left: 4,
+    width: 37,
+    height: 12,
   },
 });
 

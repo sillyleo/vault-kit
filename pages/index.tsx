@@ -45,22 +45,22 @@ const Home: NextPage = () => {
       <Button color="blackA" size="3">
         Button
       </Button>
-      <Button color="tomato" size="1">
+      <Button color="red" size="1">
         Button
       </Button>{' '}
-      <Button color="tomato" size="2">
+      <Button color="red" size="2">
         Button
       </Button>
-      <Button color="tomato" size="3">
+      <Button color="red" size="3">
         Button
       </Button>{' '}
-      <Button color="grass" size="1">
+      <Button color="yellow" size="1">
         Button
       </Button>
-      <Button color="grass" size="2">
+      <Button color="yellow" size="2">
         Button
       </Button>
-      <Button color="grass" size="3">
+      <Button color="yellow" size="3">
         Button
       </Button>{' '}
       <Button color="blue" size="1">

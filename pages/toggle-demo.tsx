@@ -22,10 +22,10 @@ const toggleDemo = () => {
         <Switch defaultChecked={true} />
 
         {/* Usage 2 */}
-        <SwitchContainer defaultChecked={true}>
+        {/* <SwitchContainer defaultChecked={true}>
           <SwitchBackground />
           <SwitchThumb />
-        </SwitchContainer>
+        </SwitchContainer> */}
       </div>
     </div>
   );

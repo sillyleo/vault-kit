@@ -199,6 +199,13 @@ export const {
 
       ...whiteA,
       ...blackA,
+
+      // for button label that changes colors
+      buttonLabelWhiteApaptive: 'white',
+      buttonLabelBlackApaptive: 'black',
+      // for button label (always stay the same)
+      buttonLabelWhite: 'white',
+      buttonLabelBlack: 'black',
     },
     space: {
       1: '4px',
@@ -245,9 +252,12 @@ export const {
     borderWidths: {},
     borderStyles: {},
     radii: {
-      sm: '8px',
-      md: '16px',
-      lg: '24px',
+      0: '8px',
+      1: '12px',
+      2: '16px',
+      3: '20px',
+      4: '24px',
+      5: '28px',
       full: '999px',
     },
     shadows: {},
@@ -316,6 +326,10 @@ export const darkTheme = createTheme({
     ...brownDarkA,
     ...bronzeDarkA,
     ...goldDarkA,
+
+    // for button label that changes colors
+    buttonLabelWhiteApaptive: 'black',
+    buttonLabelBlackApaptive: 'white',
   },
 });
 

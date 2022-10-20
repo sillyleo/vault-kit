@@ -3,13 +3,13 @@ import { styled } from '@stitches/react';
 export const Button = styled('button', {
   // base style
   fontFamily: '$body',
-  fontWeight: 'bold',
+  fontWeight: 600,
   letterSpacing: '$tight',
   display: 'inline-flex',
   alignItems: 'center',
   gap: '0.5em',
   borderWidth: 0,
-  borderRadius: '$full',
+  borderRadius: '$1',
   cursor: 'pointer',
   transition: 'transform 0.06s linear',
   lineHeight: 1,
@@ -18,12 +18,12 @@ export const Button = styled('button', {
   },
 
   '&:active': {
-    transform: 'scale(0.9)',
+    transform: 'scale(0.98)',
   },
 
-  // variants (use as props)
-  color: '$whiteA12',
+  color: '$buttonLabelWhite',
 
+  // variants (use as props)
   variants: {
     color: {
       blue: {
@@ -36,40 +36,44 @@ export const Button = styled('button', {
           backgroundColor: '$blue10',
         },
       },
-      tomato: {
-        backgroundColor: '$tomato9',
+      yellow: {
+        color: '$buttonLabelBlack',
+
+        backgroundColor: '$yellow9',
         '&:hover': {
-          backgroundColor: '$tomato10',
+          backgroundColor: '$yellow10',
         },
 
         '&:active': {
-          backgroundColor: '$tomato10',
+          backgroundColor: '$yellow10',
         },
       },
-      grass: {
-        backgroundColor: '$grass9',
+      red: {
+        backgroundColor: '$red9',
         '&:hover': {
-          backgroundColor: '$grass10',
+          backgroundColor: '$red10',
         },
 
         '&:active': {
-          backgroundColor: '$grass10',
+          backgroundColor: '$red10',
         },
       },
+
       gray: {
-        color: '$sage11',
-        backgroundColor: '$sage3',
+        color: '$buttonLabelBlackAdaptive',
+        backgroundColor: '$slate3',
         '&:hover': {
-          backgroundColor: '$sage4',
+          backgroundColor: '$slate4',
         },
 
         '&:active': {
-          backgroundColor: '$sage4',
+          backgroundColor: '$slate4',
         },
       },
       // For colored background
       whiteA: {
-        color: '$blackA12',
+        color: '$buttonLabelBlackAdaptive',
+
         backgroundColor: '$whiteA10',
         backdropFilter: 'blur(10px)',
         '&:hover': {
@@ -82,7 +86,6 @@ export const Button = styled('button', {
       },
       // For colored background
       blackA: {
-        color: '$whiteA12',
         backgroundColor: '$blackA10',
         backdropFilter: 'blur(10px)',
 
@@ -99,14 +102,17 @@ export const Button = styled('button', {
       '1': {
         fontSize: '$1',
         padding: '$2 $3',
+        height: 30,
       },
       '2': {
         fontSize: '$2',
         padding: '$2 $4',
+        height: 32,
       },
       '3': {
         fontSize: '$3',
         padding: '$3 $5',
+        height: 38,
       },
     },
   },
