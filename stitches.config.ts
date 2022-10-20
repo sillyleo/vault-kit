@@ -116,13 +116,27 @@ import {
   bronzeDarkA,
   goldDarkA,
 } from '@radix-ui/colors';
+import type * as Stitches from '@stitches/react';
+export type { VariantProps } from '@stitches/react';
+export type CSS = Stitches.CSS<typeof config>;
+
 /*
 Color source https://www.radix-ui.com/docs/colors/palette-composition/the-scales
 Use stitches as css-in-js solution: https://stitches.dev/blog/using-nextjs-with-stitches
 */
 
 // Setting up default theme
-export const { styled, getCssText, globalCss, createTheme } = createStitches({
+export const {
+  styled,
+  getCssText,
+  globalCss,
+  createTheme,
+  css,
+  theme,
+  keyframes,
+  config,
+  reset,
+} = createStitches({
   theme: {
     colors: {
       ...gray,
@@ -311,6 +325,9 @@ const cssReset = globalCss({
     padding: 0,
     letterSpacings: '$normal',
     fontFamily: '$body',
+  },
+  button: {
+    border: 'none',
   },
 });
 cssReset();

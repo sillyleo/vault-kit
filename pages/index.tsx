@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import { useAccount, useBalance } from 'wagmi';
 import { useEffect, useState } from 'react';
 import { Button } from '../components/Button';
+import { Switch } from '../components/SwitchDemo';
 
 const Home: NextPage = () => {
   const { address, isConnecting, isDisconnected } = useAccount();
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Button size="1">Button</Button>
+      <Switch /> <Button size="1">Button</Button>
       <Button size="2">Button</Button>
       <Button size="3">Button</Button>
       <Button color="whiteA" size="1">
