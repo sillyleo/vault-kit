@@ -1,5 +1,10 @@
 import Toggle from 'https://framer.com/m/Toggle-br49.js@uFJzvqKFm89IKGKnBh8I';
-import { Switch } from '../components/SwitchDemo';
+import {
+  Switch,
+  SwitchBackground,
+  SwitchContainer,
+  SwitchThumb,
+} from '../components/SwitchDemo';
 
 const toggleDemo = () => {
   return (
@@ -13,7 +18,14 @@ const toggleDemo = () => {
       <h1>Code component</h1>
 
       <div style={{ margin: '40px 0' }}>
-        <Switch />
+        {/* Usage 1 */}
+        <Switch defaultChecked={true} />
+
+        {/* Usage 2 */}
+        <SwitchContainer defaultChecked={true}>
+          <SwitchBackground />
+          <SwitchThumb />
+        </SwitchContainer>
       </div>
     </div>
   );

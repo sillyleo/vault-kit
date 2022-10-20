@@ -1,8 +1,6 @@
-import React from 'react';
-import { styled, VariantProps, CSS } from '../stitches.config';
+import React, { useEffect } from 'react';
+import { styled, VariantProps } from '../stitches.config';
 import * as SwitchPrimitive from '@radix-ui/react-switch';
-import { motion } from 'framer-motion';
-
 // Styling
 
 const StyledSwitch = styled(SwitchPrimitive.Root, {
@@ -16,13 +14,22 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   background: 'transparent',
   cursor: 'pointer',
   transition: 'all 0.3s ease',
+  // can be used to set up variants!
+  // variants: {
+  //   isBig: {
+  //     true: {
+  //       backgroundColor: 'red',
+  //       width: 65,
+  //       height: 48,
+  //     },
+  //   },
+  // },
 });
-
+// [data-value*="foo"]
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
   boxSizing: 'border-box',
   position: 'absolute',
-  transition: 'all 0.3s ease',
-
+  transition: 'all 0.5s cubic-bezier(.33,.21,0,1.07)',
   width: 22,
   height: 22,
   boxShadow:
@@ -38,16 +45,14 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
     border: '1px solid $colors$blue9',
     width: 26,
     height: 22,
-    left: 1,
   },
   '[data-state=checked]:hover &': {
     border: 'none',
   },
   '[data-state=checked]:active &': {
-    border: '1px solid $colors$blue9',
     width: 26,
     height: 22,
-    left: 18,
+    left: 16,
   },
   '&[data-state=unchecked]': {
     top: 3,
@@ -57,6 +62,10 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
     top: 3,
     left: 20,
     border: 'none',
+  },
+  // can be used to style variants!
+  '[class*=isBig] &': {
+    background: 'green',
   },
 });
 
@@ -93,16 +102,24 @@ type SwitchVariants = VariantProps<typeof StyledSwitch>;
 // For standard component props in https://www.radix-ui.com/docs/primitives/components/switch
 type SwitchPrimitiveProps = React.ComponentProps<typeof SwitchPrimitive.Root>;
 // Combine the two types
-type SwitchProps = SwitchPrimitiveProps & SwitchVariants & { css?: CSS };
+type SwitchProps = SwitchPrimitiveProps & SwitchVariants;
 
 // Export
 
+// Rename and expose all components
+export const SwitchContainer = StyledSwitch;
+export const SwitchThumb = StyledThumb;
+export const SwitchBackground = StyledBackground;
+
+// Export the single Switch component
 export const Switch = React.forwardRef<
   React.ElementRef<typeof StyledSwitch>,
   SwitchProps
->((props, forwardedRef) => (
-  <StyledSwitch {...props} ref={forwardedRef}>
-    <StyledBackground />
-    <StyledThumb />
-  </StyledSwitch>
-));
+>((props, forwardedRef) => {
+  return (
+    <SwitchContainer {...props} ref={forwardedRef}>
+      <SwitchBackground />
+      <SwitchThumb className="box" />
+    </SwitchContainer>
+  );
+});
