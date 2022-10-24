@@ -15,6 +15,9 @@
   "dependencies": {
     "@fontsource/inter": "^4.5.13",
     "@heroicons/react": "^2.0.12",
+    "@mdx-js/loader": "^2.1.5",
+    "@mdx-js/react": "^2.1.5",
+    "@next/mdx": "^12.3.1",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-accordion": "^1.0.0",
     "@radix-ui/react-popover": "1.0.0",

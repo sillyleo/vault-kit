@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { useAccount, useBalance } from 'wagmi';
 import { useEffect, useState } from 'react';
 import { Button } from '../components/Button';
-import { Switch } from '../components/SwitchDemo';
+import { Switch } from '../components/Switch';
 
 const Home: NextPage = () => {
   const { address, isConnecting, isDisconnected } = useAccount();

@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
-import { styled, VariantProps } from '../stitches.config';
 import * as SwitchPrimitive from '@radix-ui/react-switch';
-// Styling
+import { styled, VariantProps } from '../stitches.config';
+import React from 'react';
+
+// 1. Styling
 
 const StyledSwitch = styled(SwitchPrimitive.Root, {
+  border: 'none',
   boxSizing: 'border-box',
   width: 45,
   height: 28,
@@ -14,18 +16,7 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   background: 'transparent',
   cursor: 'pointer',
   transition: 'all 0.3s ease',
-  // can be used to set up variants!
-  // variants: {
-  //   isBig: {
-  //     true: {
-  //       backgroundColor: 'red',
-  //       width: 65,
-  //       height: 48,
-  //     },
-  //   },
-  // },
 });
-// [data-value*="foo"]
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
   boxSizing: 'border-box',
   position: 'absolute',
@@ -69,7 +60,6 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
     background: 'green',
   },
 });
-
 const StyledBackground = styled('div', {
   transition: 'all 0.2s ease-in-out',
   transitionDelay: '0ms',
@@ -111,7 +101,7 @@ const StyledBackground = styled('div', {
   },
 });
 
-// Type
+// 2. Type
 
 // For custom variants deinfed in the "variants" above
 type SwitchVariants = VariantProps<typeof StyledSwitch>;
@@ -120,12 +110,12 @@ type SwitchPrimitiveProps = React.ComponentProps<typeof SwitchPrimitive.Root>;
 // Combine the two types
 type SwitchProps = SwitchPrimitiveProps & SwitchVariants;
 
-// Export
+// 3. Export & Usage
 
 // Rename and expose all components
 export const SwitchContainer = StyledSwitch;
-export const SwitchThumb = StyledThumb;
 export const SwitchBackground = StyledBackground;
+export const SwitchThumb = StyledThumb;
 
 // Export the single Switch component
 export const Switch = React.forwardRef<
@@ -139,3 +129,22 @@ export const Switch = React.forwardRef<
     </SwitchContainer>
   );
 });
+
+/*************
+ * USAGE *
+ *
+ * Built in props: https://www.radix-ui.com/docs/primitives/components/switch
+ * Styling guide: https://stitches.dev/docs/styling
+ *
+ * Usage 1:
+ *
+ * <SwitchContainer>
+ *  <SwitchBackground/>
+ *  <SwitchThumb />
+ * <SwitchThumb/>
+ *
+ * Usage 2:
+ *
+ * <Switch/>
+ *
+ *************/

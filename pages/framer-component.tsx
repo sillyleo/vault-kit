@@ -1,10 +1,5 @@
 import Toggle from 'https://framer.com/m/Toggle-br49.js@uFJzvqKFm89IKGKnBh8I';
-import {
-  Switch,
-  SwitchBackground,
-  SwitchContainer,
-  SwitchThumb,
-} from '../components/SwitchDemo';
+import { Switch } from '../components/Switch';
 
 const toggleDemo = () => {
   return (
