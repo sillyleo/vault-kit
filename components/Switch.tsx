@@ -121,14 +121,15 @@ export const SwitchThumb = StyledThumb;
 export const Switch = React.forwardRef<
   React.ElementRef<typeof StyledSwitch>,
   SwitchProps
->((props, forwardedRef) => {
-  return (
-    <SwitchContainer {...props} ref={forwardedRef}>
-      <SwitchBackground />
-      <SwitchThumb className="box" />
-    </SwitchContainer>
-  );
-});
+>((props, forwardedRef) => (
+  <SwitchContainer {...props} ref={forwardedRef}>
+    <SwitchBackground />
+    <SwitchThumb className="box" />
+  </SwitchContainer>
+));
+
+// 👇️ set display name
+Switch.displayName = 'Switch';
 
 /*************
  * USAGE *
