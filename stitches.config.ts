@@ -201,8 +201,12 @@ export const {
       ...blackA,
 
       // for button label that changes colors
-      buttonLabelWhiteApaptive: 'white',
-      buttonLabelBlackApaptive: 'black',
+      buttonLabelWhiteAdaptive: 'white',
+      buttonLabelBlackAdaptive: 'black',
+
+      // switch thumb border
+      switchThumbBorder: '$slate8',
+
       // for button label (always stay the same)
       buttonLabelWhite: 'white',
       buttonLabelBlack: 'black',
@@ -266,8 +270,8 @@ export const {
   },
 });
 
-// Setting up dark theme, the "darkTheme" can be the className
-export const darkTheme = createTheme({
+// Setting up dark theme, the "dark" is the explicit className
+export const darkTheme = createTheme('dark', {
   colors: {
     ...grayDark,
     ...mauveDark,
@@ -328,8 +332,10 @@ export const darkTheme = createTheme({
     ...goldDarkA,
 
     // for button label that changes colors
-    buttonLabelWhiteApaptive: 'black',
-    buttonLabelBlackApaptive: 'white',
+    buttonLabelWhiteAdaptive: 'black',
+    buttonLabelBlackAdaptive: 'white',
+    // switch thumb border
+    switchThumbBorder: 'transparent',
   },
 });
 

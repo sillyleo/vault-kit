@@ -28,7 +28,7 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
   backgroundColor: 'white',
   overflow: 'visible',
   borderRadius: 12,
-  border: '1px solid $colors$slate8',
+  border: '1px solid $colors$switchThumbBorder',
   '[data-state=unchecked]:hover &': {
     border: '1px solid $colors$blue9',
   },

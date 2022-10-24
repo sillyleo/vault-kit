@@ -6,21 +6,21 @@ import { Button } from '../components/Button';
 import { Switch } from '../components/Switch';
 
 const Home: NextPage = () => {
-  const { address, isConnecting, isDisconnected } = useAccount();
+  // const { address, isConnecting, isDisconnected } = useAccount();
 
-  const { data, isError, isLoading } = useBalance({
-    addressOrName: address,
-    token: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
-  });
+  // const { data, isError, isLoading } = useBalance({
+  //   addressOrName: address,
+  //   token: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
+  // });
 
-  const [addressStr, setAddressStr] = useState('');
-  const [balanceData, setBalanceData] = useState<any>({});
+  // const [addressStr, setAddressStr] = useState('');
+  // const [balanceData, setBalanceData] = useState<any>({});
 
-  useEffect(() => {
-    address && setAddressStr(address);
-    data && setBalanceData(data);
-    console.log(balanceData);
-  }, [address, data]);
+  // useEffect(() => {
+  //   address && setAddressStr(address);
+  //   data && setBalanceData(data);
+  //   console.log(balanceData);
+  // }, [address, data]);
 
   return (
     <div>
@@ -72,19 +72,11 @@ const Home: NextPage = () => {
       <Button color="blue" size="3">
         Button
       </Button>
-      <div>{addressStr}</div>
-      <p>
-        USDC Balance on OP (for testing):
-        {balanceData?.formatted} {balanceData?.symbol}
-      </p>
-      <div>
-        <h1 style={{ fontWeight: 800 }}>Main page</h1>
-        <ConnectButton
+      {/* <ConnectButton
           chainStatus="icon"
           showBalance={true}
           accountStatus={{ smallScreen: 'avatar', largeScreen: 'full' }}
-        />
-      </div>
+        /> */}
     </div>
   );
 };
