@@ -1,7 +1,10 @@
 {
   "name": "vault-kit",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "A simple UI kit for building a web3 Vault",
+  "main": "components/index.ts",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
