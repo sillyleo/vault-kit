@@ -1,5 +1,5 @@
 {
-  "name": "vault-kit",
+  "name": "@sillyleo/vault-kit",
   "version": "0.1.0",
   "private": false,
   "description": "A simple UI kit for building a web3 Vault",
